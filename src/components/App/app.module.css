@@ -1,0 +1,19 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.titleLast {
+    font-size: 2rem;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 500;
+}

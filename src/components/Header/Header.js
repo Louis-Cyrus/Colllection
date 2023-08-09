@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 import styles from './header.module.css';
 import {BiBook, BiCameraMovie, BiAlbum, BiBookAlt} from 'react-icons/bi';
 
 export default function Header() {
     const subtitle = [{
+        id: 1,
         name: 'Films',
-        icon: <BiCameraMovie/>
+        icon: <BiCameraMovie/>,
+        link: '/movies'
     },
     {   
+        id: 2,
         name: 'Livres',
-        icon: <BiBook/>
+        icon: <BiBook/>,
+        link: '/books'
     },
     {
+        id: 3,
         name: 'Vinyles',
-        icon: <BiAlbum/>
+        icon: <BiAlbum/>,
+        link: '/vinyles'
     },
     {
+        id: 4,
         name: 'BD',
-        icon: <BiBookAlt/>
+        icon: <BiBookAlt/>,
+        link: '/bd'
     }
 ];
 
@@ -27,26 +36,29 @@ export default function Header() {
         setSelectedButton(index);
     };
 
+    {/* Le return doit contenir un bouton avec un icon, un nom et un lien vers la page adéquate */}
+
     return (
         <div className={styles.header}>
-            <h1 className={styles.title}>Colllection</h1>
+            <Link href="/">
+                <h1 className={styles.title}>Colllection</h1>
+            </Link>
 
             <span className={styles.section1}>
                     {subtitle.map((item, index) => (
-                        <button 
-                            key={index} 
-                            className={styles.subtitle}
-                            onClick={() => handleClick(index)}
-                            style={{backgroundColor: selectedButton === index ? '#DAAA63' : '#F8F3ED'}}
-                        >
-                            {item.icon}
-                            {item.name}
-                        </button>
+                        <Link href={item.link}>
+                            <button 
+                                key={item.id} 
+                                className={styles.subtitle}
+                                onClick={() => handleClick(index)}
+                                style={{backgroundColor: selectedButton === index ? '#DAAA63' : '#F8F3ED'}}
+                            >
+                                {item.icon}
+                                {item.name}
+                            </button>
+                        </Link>
+                        
                     ))}
-            </span>
-
-            <span className={styles.section2}>
-                <p className={styles.profil}>Profil</p>
             </span>
         </div>
     )
