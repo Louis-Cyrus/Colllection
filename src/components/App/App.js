@@ -1,4 +1,5 @@
 import styles from './app.module.css';
+import Link from 'next/link';
 
 export default function App() {
     return (
@@ -13,6 +14,7 @@ export default function App() {
                 <h3 className={styles.titleLast}>
                     Derniers ajouts
                 </h3>
+
             </div>
         </>
 

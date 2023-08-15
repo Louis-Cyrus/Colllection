@@ -36,7 +36,9 @@ export default function Header() {
         setSelectedButton(index);
     };
 
-    {/* Le return doit contenir un bouton avec un icon, un nom et un lien vers la page adéquate */}
+    {/* 
+        Le return doit contenir un bouton avec un icon, un nom et un lien vers la page adéquate 
+    */}
 
     return (
         <div className={styles.header}>
@@ -46,7 +48,7 @@ export default function Header() {
 
             <span className={styles.section1}>
                     {subtitle.map((item, index) => (
-                        <Link href={item.link}>
+                        <Link href={item.link} key={item.id}>
                             <button 
                                 key={item.id} 
                                 className={styles.subtitle}
