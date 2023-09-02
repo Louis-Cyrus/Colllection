@@ -3,8 +3,15 @@ import { useState } from 'react';
 
 {/* J'ai envie de faire une barre de recherche sur différents API pour trouver de nouveaux films, livres, vinyles et bd*/ }
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
     const [search, setSearch] = useState('');
+
+    const handleSearch = () => {
+        if (search) {
+            console.log(search);
+            onSearch(search)
+        }
+    }
 
     return (
         <div className={styles.searchbar}>
@@ -16,7 +23,14 @@ export default function SearchBar() {
                 className={styles.input}
                 aria-label='searchbar'
             />
-            <button className={styles.button} aria-label='button, search'>Rechercher</button>
+            <button 
+                className={styles.button} 
+                aria-label='button, search'
+                onClick={handleSearch}
+            >
+                Rechercher
+            </button>
+
         </div>
     );
 }

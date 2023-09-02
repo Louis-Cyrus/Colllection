@@ -1,11 +1,12 @@
 import styles from './app.module.css';
 import Link from 'next/link';
-import SearchBar from '../SearchBar/SearchBar';
+import Search from '../Search/Search';
+
 
 export default function App() {
     return (
         <>
-            <SearchBar />
+            <Search />
         </>
 
     )
