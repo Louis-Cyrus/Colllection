@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 import styles from './header.module.css';
-import {BiBook, BiCameraMovie, BiAlbum, BiBookAlt} from 'react-icons/bi';
+import {BiBook, BiCameraMovie, BiAlbum, BiBookAlt, BiBookmark} from 'react-icons/bi';
+import {GiHamburgerMenu} from 'react-icons/gi';
+import { BsArrowLeftShort} from 'react-icons/bs';
 
 export default function Header() {
     const subtitle = [{
@@ -28,8 +30,16 @@ export default function Header() {
         name: 'BD',
         icon: <BiBookAlt/>,
         link: '/bd'
+    },
+    {
+        id: 5,
+        name: "Liste d'envie",
+        icon: <BiBookmark/>,
+        link: '/wishlist'
     }
 ];
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [selectedButton, setSelectedButton] = useState(null);
     const handleClick = (index) => {
@@ -41,27 +51,41 @@ export default function Header() {
     */}
 
     return (
-        <div className={styles.header}>
-            <Link href="/">
-                <h1 className={styles.title}>Colllection</h1>
-            </Link>
+        <>
+            <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <GiHamburgerMenu />
+            </button>
 
-            <span className={styles.section1}>
-                    {subtitle.map((item, index) => (
-                        <Link href={item.link} key={item.id}>
-                            <button 
-                                key={item.id} 
-                                className={styles.subtitle}
-                                onClick={() => handleClick(index)}
-                                style={{backgroundColor: selectedButton === index ? '#DAAA63' : '#F8F3ED'}}
-                            >
-                                {item.icon}
-                                {item.name}
-                            </button>
-                        </Link>
-                        
-                    ))}
-            </span>
-        </div>
+            <div className={`${styles.header} ${isMenuOpen ? styles.open : ''}`}>
+                <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <BsArrowLeftShort />
+                </button>
+                <Link href="/">
+                    <h1 className={styles.title}>Colllection</h1>
+                </Link>
+
+                <span className={styles.section1}>
+                        {subtitle.map((item, index) => (
+                            <Link href={item.link} key={item.id}>
+                                <span
+                                    key={item.id}
+                                    className={styles.subtitle}
+                                >
+                                    {item.icon}
+                                </span>
+                                <button 
+                                    key={item.id} 
+                                    className={styles.subtitle}
+                                    onClick={() => handleClick(index)}
+                                >
+                                    {item.name}
+                                </button>
+                            </Link>
+                            
+                        ))}
+                </span>
+            </div>
+        </>
+        
     )
 }

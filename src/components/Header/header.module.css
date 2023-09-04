@@ -1,29 +1,65 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 2rem 2rem;
-    border-bottom: 3px solid #ddd;
+    border-right: 3px solid #ddd;
+    background-color: #FBFCFC ; /* or any other color you prefer */
+}
+
+.header.open {
+    transform: translateX(0);
+}
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding-top: 4rem;
+    margin-left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    color: #DAAA63;
 }
 
 .title {
     font-style: italic;
     font-size: 2.5rem;
     font-weight: 700;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .section1 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 5rem 0;
 }
 
 .subtitle {
     font-size: 1.5rem;
     font-weight: 400;
-    padding: 0.5rem 1.5rem;
-    margin: 0 1rem;
-    border-radius: 1.2rem;
+    border: none;
+    padding: 0.5rem 0.25rem;
+    margin: 1rem 0;
     cursor: pointer;
-    background-color: inherit;
+    background-color: #FBFCFC;
+}
+
+.subtitle:hover {
+    color: #DAAA63;
 }

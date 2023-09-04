@@ -24,7 +24,7 @@ export default function Search() {
     
 
     return (
-        <div className="search">
+        <div className='search'>
             <SearchBar onSearch={handleSearch} />
             {loading ? (
             <p>La patience adoucit tout mal sans remède.</p>
