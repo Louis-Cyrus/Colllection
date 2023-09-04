@@ -84,6 +84,10 @@ export default function Header() {
                             
                         ))}
                 </span>
+
+                <span className={styles.section2}>
+                    <h3 className={styles.subtitle1}>Playlists</h3>
+                </span>
             </div>
         </>
         

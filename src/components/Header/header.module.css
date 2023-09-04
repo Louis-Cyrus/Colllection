@@ -63,3 +63,11 @@
 .subtitle:hover {
     color: #DAAA63;
 }
+
+.subtitle1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: none;
+    padding: 0.5rem 0.25rem;
+    margin: 1rem 0;
+}
