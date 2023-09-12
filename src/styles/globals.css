@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'Arida';
+	src: url('../fonts/arida-regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -23,7 +30,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	color: #2C1810;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Arida', serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -32,7 +39,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #FBFCFC  ;
+	background-color: #F5F3F1;
 }
 ol, ul {
 	list-style: none;

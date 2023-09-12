@@ -33,7 +33,7 @@ export default function Header() {
     },
     {
         id: 5,
-        name: "Liste d'envie",
+        name: "Envies",
         icon: <BiBookmark/>,
         link: '/wishlist'
     }
@@ -58,31 +58,27 @@ export default function Header() {
 
             <div className={`${styles.header} ${isMenuOpen ? styles.open : ''}`}>
                 <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <BsArrowLeftShort />
+                    < BsArrowLeftShort />
                 </button>
                 <Link href="/">
                     <h1 className={styles.title}>Colllection</h1>
                 </Link>
 
                 <span className={styles.section1}>
-                        {subtitle.map((item, index) => (
-                            <Link href={item.link} key={item.id}>
-                                <span
-                                    key={item.id}
-                                    className={styles.subtitle}
-                                >
-                                    {item.icon}
-                                </span>
+                    {subtitle.map((item, index) => (
+                        <Link href={item.link} key={item.id}>
+                            <span className={styles.subtitle}>
+                                {item.icon}
                                 <button 
-                                    key={item.id} 
                                     className={styles.subtitle}
                                     onClick={() => handleClick(index)}
                                 >
                                     {item.name}
                                 </button>
-                            </Link>
-                            
-                        ))}
+                            </span>
+                        </Link>
+                    ))}
+
                 </span>
 
                 <span className={styles.section2}>
