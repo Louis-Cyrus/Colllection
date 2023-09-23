@@ -20,19 +20,24 @@ export default function SearchResults({ results = []}) {
             {results.map((movie, index) => (
                 <span
                     key={index}
-                    className={`${styles.card} ${clicked.includes(index) ? styles.clicked : ""}`}
+                    className={styles.card}
                     onClick={() => handleClick(index)}
-              >
-              
-                    <img 
-                        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
-                        alt={movie.title} 
-                        className={styles.image}
-                    />
-                    <BsFillBookmarkFill
-                        className={styles.bookmark}
-                    />
-                    <h3 className={styles.title}>{movie.title}</h3>
+                >
+                    <span className={`${styles.overlay} ${clicked.includes(index) ? styles.clicked : ""}`}>
+                        <img 
+                            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
+                            alt={movie.title} 
+                            className={styles.image}
+                        />
+                        <BsFillBookmarkFill
+                            className={styles.bookmark}
+                        />
+                    </span>
+                    <span className={styles.infos}>
+                        <h3 className={styles.title}>{movie.title}</h3>
+                        <p className={styles.description}>{movie.overview}</p>
+                    </span>
+                    
                 </span>
             ))}
         </div>
