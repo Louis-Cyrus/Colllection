@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.previous {
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.page {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.next {
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 10rem;
+}
