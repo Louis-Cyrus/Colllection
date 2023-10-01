@@ -29,6 +29,7 @@ export const searchMoviesWithCredits = async (query, page = 1) => {
       });
 
       const movies = response.data.results;
+      const totalPages = response.data.total_pages; // Extract total pages from response
 
       // Fetch les crédits pour chaque film
       const creditsPromises = movies.map(movie => fetchMovieCredits(movie.id));
@@ -39,12 +40,13 @@ export const searchMoviesWithCredits = async (query, page = 1) => {
           movie.credits = creditsResponses[index];
       });
 
-      return movies;
+      return { movies, totalPages }; // Return movies and total pages
 
   } catch (error) {
       throw error;
   }
 };
+
 
 
 export const searchMovies = async (query) => {
