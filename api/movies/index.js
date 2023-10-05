@@ -64,4 +64,16 @@ export const searchMovies = async (query) => {
     }
   };
 
-
+  export const fetchMovieById = async (id) => {
+    try {
+      const response = await axios.get(`${MOVIES_BASE_URL}/movie/${id}`, {
+        params: {
+          api_key: API_KEY,
+          language: 'fr-FR',
+        }
+      });
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };

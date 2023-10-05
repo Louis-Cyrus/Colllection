@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './searchresults.module.css';
+import Link from 'next/link';
 
 export default function SearchResults({ results = []}) {
     console.log(results);
@@ -21,25 +22,27 @@ export default function SearchResults({ results = []}) {
                 const directorName = director ? director.name : 'Inconnu';
 
                 return (
+                    
                     <span
                         key={index}
                         className={styles.card}
                         onClick={() => handleClick(index)}
                     >
-                        <span className={styles.overlay}>
-                            <img 
-                                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
-                                alt={movie.title} 
-                                className={styles.image}
-                            />
-                        </span>
-                        <span className={styles.infos}>
-                            <h3 className={styles.title}>{movie.title}</h3>
-                            <p className={styles.director}>Un film de {directorName}</p>                     
-                        </span>
-                        
+                        <Link href={`/movie/${movie.id}`} key={index}>
+                            <span className={styles.overlay}>
+                                <img 
+                                    src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
+                                    alt={movie.title} 
+                                    className={styles.image}
+                                />
+                            </span>
+                            <span className={styles.infos}>
+                                <h3 className={styles.title}>{movie.title}</h3>
+                                <p className={styles.director}>Un film de {directorName}</p>                     
+                            </span>
+                        </Link>
                     </span>
-
+                    
                     
                 );
             })}
