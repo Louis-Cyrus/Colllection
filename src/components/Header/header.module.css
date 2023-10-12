@@ -11,8 +11,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem 2rem;
-    border-right: 3px solid #ddd;
-    background-color: #F5F3F1 ; 
+    background-color: #14181C ; 
 }
 
 .header.open {
@@ -29,6 +28,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    color: #F5F3F1;
 }
 
 .hamburger:hover {
@@ -53,13 +53,14 @@
 
 .subtitle {
     font-family: inherit;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 400;
     border: none;
     padding: 0.5rem 0.25rem;
     margin: 1rem 0;
     cursor: pointer;
-    background-color: #F5F3F1;
+    color: #F5F3F1;
+    background-color: #14181C;
 }
 
 .subtitle:hover {
