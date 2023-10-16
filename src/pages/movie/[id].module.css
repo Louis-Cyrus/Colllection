@@ -56,36 +56,239 @@
     z-index: 2;
     top: 25rem;
     width: 60%;
-  }
+}
   
-  .image {
-    flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 30%;
-  }
+.image {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  width: 30%;
+}
+
+.backdrop {
+  width: 80%;
+  height: 30rem;
+  object-fit: contain;
+}
+
+.vote {
+  padding: 0.5rem 1rem;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.ratingInput {
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.ratingLabel {
+  margin: 1rem 1rem;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.submitRatingButton {
+  margin: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.submitRatingButton:hover {
+  background-color: #fff;
+  color: #14181d;
+  opacity: 1;
+}
+
+.submittedRating {
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  color: #ffea00;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 10rem;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.icon:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.item {
+  margin: 0.5rem 0;
+  text-align: justify;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.item:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.text {
+  width: 70%;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.details {
+  margin: 10px 0; 
+  font-size: 1.4em;
+  opacity: 0.7; 
+}
+
+.category {
+  margin: 0.5rem 0;
+  font-size: 1em;
+  text-align: justify;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.tagline {
+  margin-top: 5rem; 
+  font-size: 1.25em; 
+  text-align: justify;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
   
-  .backdrop {
-    width: 80%;
-    height: 25rem;
-    border-radius: 4%;
-    object-fit: cover;
-  }
+.overview {
+  margin: 1.5rem 0;
+  font-size: 1.25em;
+  text-align: justify;
+  line-height: 1.7em;
+  opacity: 0.7;
+}
+
+.subtitle {
+  font-size: 1.25em; 
+  text-align: justify;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
   
-  .text {
-    width: 70%;
-  }
-  
-  .title {
-    margin: 0;
-    font-size: 2em;
-  }
-  
-  .details {
-    margin: 10px 0; /* Adjust as needed */
-    font-size: 1em; /* Adjust as needed */
-  }
-  
-  .overview {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
+.cast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem;
+  width: 10rem;
+}
+
+.profile {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  margin: 0.5rem 0;
+  font-size: 1.15em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.character {
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.showMoreButton {
+  margin: 1.5rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.showMoreButton:hover {
+  background-color: #fff;
+  color: #14181d;
+  opacity: 1;
+}
+
+.showLessButton {
+  margin: 1.5rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #14181d;
+  color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.showLessButton:hover {
+  background-color: #fff;
+  color: #14181d;
+  opacity: 1;
+}
