@@ -55,10 +55,6 @@ export default function Movie({ movie }) {
         setUserRating(e.target.value);
     }
 
-    const handleSubmitRating = () => {
-        console.log("Note soumise", userRating);
-    }
-
     const [isRatingSubmitted, setIsRatingSubmitted] = useState(false);
 
     const handleRatingSubmit = () => {
@@ -134,7 +130,7 @@ export default function Movie({ movie }) {
                         )}
                     </span> <br />
 
-                    {openModal === "review" && <ReviewModal onClose={() => setOpenModal(null)} />}
+                    {openModal === "review" && <ReviewModal movie={movie} onClose={() => setOpenModal(null)} />}
                     {openModal === "addToList" && <AddToListModal onClose={() => setOpenModal(null)} />}
 
                     <span className={styles.actions}>
